@@ -1,3 +1,19 @@
 <p>
-  my-movie works!
+  movie detail works!
 </p>
+
+<div>
+  <h2>Room {{oneMovie.room}}</h2>
+  <h3>{{oneMovie.title}}</h3>
+  <ul>
+    <li>Genres : {{oneMovie.genres}}</li>
+    <li>Year : {{oneMovie.year}}</li>
+    <li>Director : {{oneMovie.director}}</li>
+    <li>Schedule : {{oneMovie.hours}}</li>
+  </ul>
+  <p>{{oneMovie.synopsis}}</p>
+  <img src="{{oneMovie.poster}}" alt="" width="500">
+</div>
+
+
+<a [routerLink]="['/home']"> Back to home </a>

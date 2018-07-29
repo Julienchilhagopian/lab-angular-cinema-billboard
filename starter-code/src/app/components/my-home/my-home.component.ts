@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
+import { Router } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-my-home',
@@ -8,12 +9,18 @@ import { MoviesService } from '../../services/movies.service';
 })
 export class MyHomeComponent implements OnInit {
 movies: Array<object>;
+oneMovie: Object;
 
-  constructor(private movieService: MoviesService) {
+  constructor(private movieService: MoviesService, private router: Router) {
     this.movies = movieService.getMovies();
+    // this.oneMovie = movieService.getOneMovie()
   }
 
   ngOnInit() {
+  }
+
+  viewDetail(id) {
+    this.router.navigate(['movie', id]);
   }
 
 }

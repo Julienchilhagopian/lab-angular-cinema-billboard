@@ -6,5 +6,5 @@
   <h2>Room {{item.room}}</h2>
   <img src="{{item.poster}}" alt="" width="300">
   <p>{{item.title}}</p>
-  <a [routerLink]="['/movie/:id']"> See pretty details </a>
+  <button (click)="viewDetail(item.id)"> See pretty details </button>
 </div>
