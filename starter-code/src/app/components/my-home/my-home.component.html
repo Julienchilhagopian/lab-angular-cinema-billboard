@@ -1,0 +1,10 @@
+<p>
+  MY HOME PAGE RUNNING !
+</p>
+
+<div *ngFor="let item of movies">
+  <h2>Room {{item.room}}</h2>
+  <img src="{{item.poster}}" alt="" width="300">
+  <p>{{item.title}}</p>
+  <a [routerLink]="['/movie/:id']"> See pretty details </a>
+</div>
